@@ -5,11 +5,13 @@
 class Form
 {
 protected:
-    const unsigned int m_offset;
+    unsigned int m_offset;
 
 public:
     explicit Form(unsigned int offset) : m_offset(offset) {}
     virtual ~Form() {}
+
+    void setOffset(unsigned int offset) { m_offset = offset; }
 
     // чисто виртуальная функция / 纯虚函数
     virtual void draw() const = 0;
